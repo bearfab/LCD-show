@@ -1,63 +1,22 @@
-### Install drivers in the Ubuntu system
-https://github.com/lcdwiki/LCD-show-ubuntu
 
-### Install drivers in the Kali system
-https://github.com/lcdwiki/LCD-show-kali
-
-### Install drivers in the RetroPie system
-https://github.com/lcdwiki/LCD-show-retropie
-
-
-
-Install drivers in the Raspbian system<br>
+###라즈베리파이 3.5인치 디스플레이 드라이버 설치 방법  
 ====================================================
-Update: <br>
-  v2.1-20191106<br>
-  Update to support MHS35B<br>
-Update: <br>
-  v2.0-20190704<br>
-  Update to support rotate the display direction<br>
-Update: <br>
-  v1.9-20181204<br>
-  Update to support MHS40 & MHS32<br>
-Update: <br>
-  v1.8-20180907<br>
-  Update to support MHS35<br>
-Update: <br>
-  v1.7-20180320<br>
-  Update to support Raspbian Version: March 2018(Release date:2018-03-13)<br>
-Update: <br>
-  v1.6-20170824<br>
-  Update xserver to support Raspbian-2017-08-16<br>
-Update: <br>
-  v1.5-20170706<br>
-  Update to support Raspbian-2017-07-05, Raspbian-2017-06-21<br>
-Update: <br>
-  v1.3-20170612<br>
-  fixed to support Raspbian-2017-03-02, Raspbian-2017-04-10<br>
-Update: <br>
-  v1.2-20170302<br>
-  Add xserver-xorg-input-evdev_1%3a2.10.3-1_armhf.deb to support Raspbian-2017-03-02<br>
-Update: <br>
-  v1.1-20160815<br><br>
 
-
-# How to install the LCD driver of Raspberry Pi
-  
-1.)Step1, Install Raspbian official mirror <br>
+1.)라즈베리파이 OS를 설치
 ====================================================
-  a)Download Raspbian official mirror:<br>
+  a)라즈베리파이 OS 다운로드 페이지 접속후 이미지 다운로드<br>
   https://www.raspberrypi.org/downloads/<br>
-  b)Use“SDFormatter.exe”to Format your TF Card<br>
-  c)Use“Win32DiskImager.exe” Burning mirror to TF Card<br>
-     
-2.) Step2, Clone my repo onto your pi<br>
+  b) 라즈베리파이 이미지 라이팅용 프로그램(이미저, Etcher 등) 다운로드
+  c) 이미지 라이팅용 프로그램을 사용해서 SD카드나 USB에 이미지를 라이팅합니다.
+       
+2.) ssh를 통해 라즈베리파이에 접속 <br>
 ====================================================
-Use SSH to connect the Raspberry Pi, <br>
-And Ensure that the Raspberry Pi is connected to the Internet before executing the following commands:
------------------------------------------------------------------------------------------------------
-
-```sudo rm -rf LCD-show```<br>
+  a) sd카드를 컴퓨터에 꽂고  sd카드의 boot파티션에 ssh이라는 이름의 파일 생성
+  b) 라즈베리파이에 랜선, sd카드를 꽂고 부팅 후
+  c) 데스크탑에서 putty등의 프로그램을 사용해서 라즈베리파이에 ssh로 접속
+     
+2.) 드라이버 저장소 클론<br>
+====================================================
 ```git clone https://github.com/goodtft/LCD-show.git```<br>
 ```chmod -R 755 LCD-show```<br>
 ```cd LCD-show/```<br>
